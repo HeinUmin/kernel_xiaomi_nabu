@@ -1,14 +1,9 @@
+name: Build kernel by clang-r416183b1
 on:
-    workflow_dispatch:
-      inputs:
-        title:
-          description: 'Action title'
-          required: false
-          type: string
-    push:
-        branches:
-            udc
-run-name: ${{inputs.title}}
+  watch:
+    types: [started]
+
+  workflow_dispatch:
 jobs:
     buildAndUpload:
         runs-on: ubuntu-latest
