@@ -1,4 +1,4 @@
-name: Build kernel by clang-r416183b1
+name: Build kernel
 on:
   watch:
     types: [started]
